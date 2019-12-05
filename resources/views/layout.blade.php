@@ -83,6 +83,8 @@
                   @yield('content')
                 <br />
                 <div class="links">
+                  <a href="{{ route('home') }}">Home</a>
+                  <a href="{{ route('contact') }}">Contact</a>
                   <a target="_blank" href="https://github.com/d-actor">Created by Dan Actor</a>
                 </div>
             </div>
