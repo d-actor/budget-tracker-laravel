@@ -21,7 +21,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 95vh;
             }
 
             .flex-center {
@@ -50,12 +50,16 @@
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
+                padding: 25px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+            }
+
+            .footer {
+              position: static;
             }
 
             .m-b-md {
@@ -64,6 +68,10 @@
         </style>
     </head>
     <body>
+        <div class="links">
+          <a href="{{ route('home') }}">Home</a>
+          <a href="{{ route('contact') }}">Contact</a>
+        </div>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -77,17 +85,15 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+                @endif
 
             <div class="content">
                   @yield('content')
                 <br />
-                <div class="links">
-                  <a href="{{ route('home') }}">Home</a>
-                  <a href="{{ route('contact') }}">Contact</a>
-                  <a target="_blank" href="https://github.com/d-actor">Created by Dan Actor</a>
-                </div>
             </div>
+        </div>
+        <div class="links footer">
+            <a target="_blank" href="https://github.com/d-actor/budget-tracker-laravel">Created by Dan Actor</a>
         </div>
     </body>
 </html>
